@@ -7,6 +7,11 @@ import { HeaderComponent } from './Header/header.component';
 import { MainComponent } from './MainContent/main.component';
 import { FooterComponent } from './Footer/footer.component';
 import { DetailsComponent } from './Details/details.component';
+import { PaymentMethodComponent } from './PaymentMethod/paymentmethod.component';
+import { NetBankingComponent } from './NetBanking/netbanking.component';
+import { AdminLoginComponent } from './AdminLogin/admin.component';
+import { UPIPaymentComponent } from './UPI/upi.component';
+import { PaymentVerifiedComponent } from './PaymentVerified/paymentverified.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +19,12 @@ import { DetailsComponent } from './Details/details.component';
     HeaderComponent,
     MainComponent,
     FooterComponent,
-    DetailsComponent
+    DetailsComponent,
+    PaymentMethodComponent,
+    NetBankingComponent,
+    AdminLoginComponent,
+    UPIPaymentComponent,
+    PaymentVerifiedComponent
   ],
   imports: [
     BrowserModule,

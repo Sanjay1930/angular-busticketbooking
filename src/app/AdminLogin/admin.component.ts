@@ -4,10 +4,10 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './details.view.html',
+  templateUrl: './adminlogin.view.html',
 //   styleUrls: ['./app.component.css']
 })
-export class DetailsComponent {
+export class AdminLoginComponent {
 
   
 constructor(private router: Router){
