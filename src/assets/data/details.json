@@ -1,0 +1,104 @@
+{
+    "data" : 
+    [{
+        "from_place" : "Kovilpatti",
+        "to_place" : "Kayatar",
+        "fare" : 30
+    },
+    {
+        "from_place" : "Kovilpatti",
+        "to_place" : "Sankar Nagar",
+        "fare" : 40
+    },
+    {
+        "from_place" : "Kovilpatti",
+        "to_place" : "Tirunelveli",
+        "fare" : 50
+    },
+    {
+        "from_place" : "Kayatar",
+        "to_place" : "Kovilpatti",
+        "fare" : 30
+    },
+    {
+        "from_place" : "Kayatar",
+        "to_place" : "Sankar Nagar",
+        "fare" : 20
+    },
+    {
+        "from_place" : "Kayatar",
+        "to_place" : "Tirunelveli",
+        "fare" : 35
+    },
+    {
+        "from_place" : "Sankar Nagar",
+        "to_place" : "Kovilpatti",
+        "fare" : 40
+    },
+    {
+        "from_place" : "Sankar Nagar",
+        "to_place" : "Kayatar",
+        "fare" : 20
+    },
+    {
+        "from_place" : "Sankar Nagar",
+        "to_place" : "Tirunelveli",
+        "fare" : 10
+    },
+    {
+        "from_place" : "Tirunelveli",
+        "to_place" : "Kovilpatti",
+        "fare" : 50
+    },
+    {
+        "from_place" : "Tirunelveli",
+        "to_place" : "Kayatar",
+        "fare" : 35
+    },
+    {
+        "from_place" : "Tirunelveli",
+        "to_place" : "Sankar Nagar",
+        "fare" : 10
+    }]
+
+    ,
+    "sodest" : [
+        {
+            "from" : ["Kovilpatti", "Kayatar", "Sankarnagar", "Tirunelveli"],
+            "to" : ["Kovilpatti", "Kayatar", "Sankarnagar", "Tirunelveli"]
+        }
+    ],
+
+    "data_short" :
+        {
+            "Kovilpatti" : [
+                {
+                    "Kayatar" : 30,
+                    "Sankarnagar" : 40,
+                    "Tirunelveli" : 50
+                }
+            ],
+            "Kayatar" : [
+                {
+                    "Kovilpatti" : 30,
+                    "Sankarnagar" : 20,
+                    "Tirunelveli" : 35
+                }
+            ],
+            "Sankarnagar" : [
+                {
+                    "Kovilpatti" : 40,
+                    "Kayatar" : 20,
+                    "Tirunelveli" : 10
+                }
+            ],
+            "Tirunelveli" : [
+                {
+                    "Kovilpatti" : 50,
+                    "Kayatar" : 35,
+                    "Sankarnagar" : 10
+                }
+            ]
+        }
+    
+}

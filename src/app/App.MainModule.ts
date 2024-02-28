@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, forwardRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +12,9 @@ import { NetBankingComponent } from './NetBanking/netbanking.component';
 import { AdminLoginComponent } from './AdminLogin/admin.component';
 import { UPIPaymentComponent } from './UPI/upi.component';
 import { PaymentVerifiedComponent } from './PaymentVerified/paymentverified.component';
+import { HttpClientModule } from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +32,11 @@ import { PaymentVerifiedComponent } from './PaymentVerified/paymentverified.comp
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    // AngularFirestoreModule,
+    // AngularFireModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

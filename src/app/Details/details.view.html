@@ -12,32 +12,30 @@
     style="background-color: transparent;border-radius: 10px;backdrop-filter: saturate(190%) blur(10px);width: 50%;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;height: 80vh;">
 
         <br>
-        <form action="" class="text-center mt-3">
+        <div class="text-center mt-3">
 
             <h2 style="text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">Fill Details</h2>
             <hr>
-<br>
+            <br>
             <div class="row justify-content-center">
                 <div class="form-group">
                     <h5>Name : </h5>
-                    <input type="text" class="form-control" >
+                    <input [(ngModel)]="TicketDetails.name" type="text" class="form-control" required>
                 </div>
             </div>
 
             <div class="row justify-content-center">
                 <div class="form-group">
                     <h5>Age : </h5>
-                    <input type="number" class="form-control" >
+                    <input [(ngModel)]="TicketDetails.age" type="number" class="form-control" required>
                 </div>
             </div>
 
             <div class="row justify-content-center">
                 <div class="form-group">
                     <h5>Source : </h5>
-                    <select name="" class="form-control" id="">
-                        <option value="Madurai">Madurai</option>
-                        <option value="Virdhunagar">Virdhunagar</option>
-                        <option value="Theni">Theni</option>
+                    <select [(ngModel)]="TicketDetails.source" (change)="calculateTotal()" name="" class="form-control" id="">
+                        <option *ngFor="let val of details" [value]="val">{{ val }}</option>
                     </select>
                 </div>
             </div>
@@ -45,27 +43,27 @@
             <div class="row justify-content-center">
                 <div class="form-group">
                     <h5>Destination : </h5>
-                    <select name="" class="form-control" id="">
-                        <option value="Madurai">Madurai</option>
-                        <option value="Virdhunagar">Virdhunagar</option>
-                        <option value="Theni">Theni</option>
+                    <select name="" [(ngModel)]="TicketDetails.destination" (change)="calculateTotal()" class="form-control" id="">
+                        <option *ngFor="let val of details" [value]="val">{{ val }}</option>
+                        <!-- <option value="Virdhunagar">Virdhunagar</option>
+                        <option value="Theni">Theni</option> -->
                     </select>
                 </div>
             </div>
 
             <div class="row justify-content-center">
                 <div class="form-group">
-                    <h4 ><span style="color: aliceblue;">Total Fare : </span> <u style="color: brown;">30</u></h4>
+                    <h4 ><span style="color: aliceblue;">Total Fare : </span> <u style="color: brown;">{{ TicketDetails.amount }}</u></h4>
                 </div>
             </div>
 
             <div class="row justify-content-center">
                 <div class="form-group">
-                    <button class="btn" (click) = "goToPage('payment_method');" >Book now</button>
+                    <button class="btn" (click) = "goToPage('payment_method');printData()" [disabled]="TicketDetails.amount == undefined || TicketDetails.amount == 0" >Book now</button>
                 </div>
             </div>
 
-        </form>
+        </div>
         <br>
     </div>
     
