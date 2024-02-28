@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { admin } from './ladmin.model';
 
 
 @Component({
@@ -10,11 +11,19 @@ import { Router } from '@angular/router';
 export class AdminLoginComponent {
 
   
-constructor(private router: Router){
-}
+    AdminDetails : admin = new admin();
 
-goToPage(pageName:string){
-  this.router.navigate([`${pageName}`]);
-}
+    constructor(private router: Router){
+    }
+
+    goToPage(pageName:string){
+      this.router.navigate([`${pageName}`]);
+    }
+
+    checkLoginCredentials(){
+      console.log(this.AdminDetails.username +" "+this.AdminDetails.password)
+    }
+
+
 
 }

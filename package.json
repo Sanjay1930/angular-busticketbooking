@@ -19,6 +19,7 @@
     "@angular/router": "^15.0.0",
     "@ngneat/until-destroy": "^10.0.0",
     "@prisma/client": "^5.10.2",
+    "@vercel/postgres": "^0.7.2",
     "firebase": "^10.8.0",
     "prisma": "^5.10.2",
     "rxjs": "~7.5.0",

@@ -35,16 +35,29 @@ getKeyValue(this : DetailsComponent  , key : any, keyTwo : any){
 }
 
 goToPage(pageName:string){
+  this.TicketDetails.tcid = Math.floor(100000 + Math.random() * 900000);
+  
+  let data = ("id="+this.TicketDetails.id) + "&" + ("name=" + this.TicketDetails.name) + "&" + ("age=" + this.TicketDetails.age) + "&" + ("amount=" + this.TicketDetails.amount) + "&" + ("source=" + this.TicketDetails.source) + "&" + ("destination=" + this.TicketDetails.destination) + "&" + ("tcid=" + this.TicketDetails.tcid)
+
+  this.http.get("https://backend-dypc.onrender.com/setdata?"+data,{
+    headers : new HttpHeaders({
+      'Content-Type': 'application/json',
+    })
+  }).subscribe((res : any) => {
+    console.log(this.TicketDetails)
+  })
   this.router.navigate([`${pageName}`]);
 }
 
+
+
+
 printData(){
-  console.log(this.TicketDetails)
-  this.TicketDetails.tcid = Math.floor(100000 + Math.random() * 900000);
-  // this.http.get("assets/data/transactions.json", this.TicketDetails).subscribe((res : any) => {
-  //   console.log(res)
-  // })
+  // console.log(this.TicketDetails)
+
+
 }
+//https://backend-dypc.onrender.com/setdata
 
 ngOnInit() : void{
   this.loadDetails();
@@ -56,6 +69,8 @@ loadDetails(){
     this.fareDetails = res.data_short;
   })
 }
+
+
 
 
 }
