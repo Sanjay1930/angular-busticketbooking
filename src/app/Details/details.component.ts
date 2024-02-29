@@ -39,13 +39,15 @@ goToPage(pageName:string){
   
   let data = ("id="+this.TicketDetails.id) + "&" + ("name=" + this.TicketDetails.name) + "&" + ("age=" + this.TicketDetails.age) + "&" + ("amount=" + this.TicketDetails.amount) + "&" + ("source=" + this.TicketDetails.source) + "&" + ("destination=" + this.TicketDetails.destination) + "&" + ("tcid=" + this.TicketDetails.tcid)
 
-  this.http.get("https://backend-dypc.onrender.com/setdata?"+data,{
+  this.http.post("http://localhost:3000/adddata", JSON.stringify(this.TicketDetails),{
     headers : new HttpHeaders({
       'Content-Type': 'application/json',
+      'Access-control-allow-origin' : '*'
     })
-  }).subscribe((res : any) => {
-    console.log(this.TicketDetails)
-  })
+  }).subscribe(
+    (res: any) => console.log("Response:", res),
+    (error) => console.error("Error:", error)
+);
   this.router.navigate([`${pageName}`]);
 }
 
