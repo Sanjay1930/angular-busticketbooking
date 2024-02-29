@@ -62,6 +62,10 @@ loadDetails(){
 
 }
 
+goToPage(pageName:string){
+  this.router.navigate([`${pageName}`]);
+}
+
 
 async showAndDeleteImage(url: string) {
   try {
