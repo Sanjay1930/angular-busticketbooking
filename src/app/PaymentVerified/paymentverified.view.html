@@ -9,14 +9,14 @@
     
     
         <div class="container" 
-        style="background-color: transparent;border-radius: 10px;backdrop-filter: saturate(190%) blur(10px);width: 50%;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+        style="background-color: white;border-radius: 10px;backdrop-filter: saturate(190%) blur(10px);width: 50%;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
     
             
         <br>
 
 
         <h2>Payment Verified</h2>
-
+            <hr><br>
         <table class="table">
             <tr>
             <th>Name</th>
@@ -26,21 +26,26 @@
             <th>Destination</th>
         </tr>
 
-        <tr *ngFor="let a of outputData">
-            <td>{{ a.name }}</td>
-            <td>{{ a.amount }}</td>
-            <td>{{ a.age }}</td>
-            <td>{{ a.source }}</td>
-            <td>{{ a.destination }}</td>
-
+        <tr>
+            <td>{{ max.name }}</td>
+            <td>{{ max.amount }}</td>
+            <td>{{ max.age }}</td>
+            <td>{{ max.source }}</td>
+            <td>{{ max.destination }}</td>
         </tr>
         </table>
 
         <br>
 
-        <button class="btn" (click)="deleteRecentData()">Ok</button>
+        <h3> Transaction ID : </h3> <h5>{{ max.tcid }}</h5>
+
+        <img *ngIf="imageUrl" class="img" [src]="imageUrl" alt="Image description" />
+
+
+        <button class="btn">Ok</button>
         
-        <br>
+        <br><br>
+
 
 
         </div>

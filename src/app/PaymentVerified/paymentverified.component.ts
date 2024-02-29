@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders  } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpResponse  } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { createClient  } from '@supabase/supabase-js';
@@ -39,6 +39,9 @@ Ticket : ticket = new ticket()
 outputData ?: any ;
 
 max ?: any;
+
+imageUrl ?: string;
+
 loadDetails(){
   this.Ticket.name = "Jeyesh";
   this.Ticket.age = 10;
@@ -47,21 +50,44 @@ loadDetails(){
   this.Ticket.source = "Kadayur"
   this.Ticket.destination = "Madurai"
 
-  supabase.from('recent_trans').select('*').then((res) => {
+  const data = supabase.from('transactions').select('*').then((res) => {
     // console.log(res.data)
+    if(res.data != null)
+    for(let a of res.data){
+      this.max = a
+    }
+    this.showAndDeleteImage("https://quickchart.io/qr?text="+JSON.stringify(this.max))
     this.outputData = res.data
   })
 
+}
 
+
+async showAndDeleteImage(url: string) {
+  try {
+    const observable = this.http.get(url, { responseType: 'blob' });
+
+    observable.subscribe(
+      (response) => {
+
+        const blob = new Blob();
+        console.log("Value : ", (response))
+
+        // this.displayImage(blob); 
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          this.imageUrl = reader.result as string; // Set the image URL
+        };
+        reader.readAsDataURL(response);
+        // this.removeImageFromDisplay(); Implement removal logic (see below)
+      }
+    );
+  } catch (error) {
+    console.error('Error:', error);
+    // Handle errors appropriately
+  }
 }
-deleteRecentData(){
-  supabase
-      .from('recent_trans') // Replace with actual table name
-      .delete().eq('user_id','e0e29014-9e53-4b54-976f-19a05bb93363').then(res => {
-        debugger
-        this.outputData = null
-      })
-}
+
 
 
 
