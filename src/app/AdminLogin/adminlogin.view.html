@@ -5,11 +5,11 @@
     <br>
     </div>
     
-    <div class="row" style="background-image: url('assets/img/hero/h1_hero1.png');background-size: cover;height: 100vh;">
+    <div class="row" style="background-image: url('assets/img/hero/h1_hero1.png');background-size: cover;">
     
     
         <div class="container" 
-        style="background-color: transparent;border-radius: 10px;backdrop-filter: saturate(190%) blur(10px);width: 50%;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;height: 50vh;">
+        style="background-color: transparent;border-radius: 10px;backdrop-filter: saturate(190%) blur(10px);width: 50%;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
     
             
         <br>
@@ -17,7 +17,7 @@
 
         <h2>Login</h2>
         <hr><br>
-        <form action="">
+        <!-- <form action="/show_transactions"> -->
 
             <div class="form-group">
                 <h5>Username</h5>
@@ -29,14 +29,17 @@
             </div>
 
             <div class="form-group">
-                <button type="submit" class="btn">Login</button>
+                <button type="submit" class="btn" (click)="getCredentials()">Login</button>
             </div>
-        </form>
+        <!-- </form> -->
         
         <br>
+
+        
+        <all-details *ngIf="isAdmin"></all-details>
+
         </div>
-        
-        <br>
+<br>
     
     </div>
     

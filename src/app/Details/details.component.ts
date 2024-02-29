@@ -2,9 +2,17 @@ import { HttpClient, HttpHeaders  } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ticket } from './details.model';
+import { createClient  } from '@supabase/supabase-js';
+
+
+
+const supabaseUrl = 'https://dujuelyrtbutsjxzikpq.supabase.co'; // Replace with your Supabase project URL
+ const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR1anVlbHlydGJ1dHNqeHppa3BxIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTQ3OTU0OTEsImV4cCI6MjAxMDM3MTQ5MX0.g8RzXeGSaIaHZF2GYKszVb6-MnA6Q6DTagVbZUsfYBs'; 
+ const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
 
 @Component({
-  selector: 'app-root',
+  // selector: 'app-root',
   templateUrl: './details.view.html',
 //   styleUrls: ['./app.component.css']
 })
@@ -16,6 +24,7 @@ constructor(private router: Router, private http : HttpClient){
 
 details : any[] = [];
 fareDetails : any[] = [];
+outputData ?: any ;
 
 TicketDetails : ticket = new ticket();
 totalFare : number = 0;
@@ -35,30 +44,18 @@ getKeyValue(this : DetailsComponent  , key : any, keyTwo : any){
 }
 
 goToPage(pageName:string){
-  this.TicketDetails.tcid = Math.floor(100000 + Math.random() * 900000);
-  
-  let data = ("id="+this.TicketDetails.id) + "&" + ("name=" + this.TicketDetails.name) + "&" + ("age=" + this.TicketDetails.age) + "&" + ("amount=" + this.TicketDetails.amount) + "&" + ("source=" + this.TicketDetails.source) + "&" + ("destination=" + this.TicketDetails.destination) + "&" + ("tcid=" + this.TicketDetails.tcid)
+supabase.from('transactions').insert(this.TicketDetails).then((res) => {
+  console.log(res.data)
+})
 
-  this.http.post("https://backend-dypc.onrender.com/adddata", JSON.stringify(this.TicketDetails),{
-    headers : new HttpHeaders({
-      'Content-Type': 'application/json',
-    })
-  }).subscribe(
-    (res: any) => console.log("Response:", res),
-    (error) => console.error("Error:", error)
-);
+this.TicketDetails.user_id = "e0e29014-9e53-4b54-976f-19a05bb93363";
+
+supabase.from('recent_trans').insert(this.TicketDetails).then((res) => {
+  console.log(res.data)
+})
+
   this.router.navigate([`${pageName}`]);
 }
-
-
-
-
-printData(){
-  // console.log(this.TicketDetails)
-
-
-}
-//https://backend-dypc.onrender.com/setdata
 
 ngOnInit() : void{
   this.loadDetails();
@@ -70,8 +67,6 @@ loadDetails(){
     this.fareDetails = res.data_short;
   })
 }
-
-
 
 
 }

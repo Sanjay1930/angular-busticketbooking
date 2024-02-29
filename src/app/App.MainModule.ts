@@ -14,6 +14,8 @@ import { UPIPaymentComponent } from './UPI/upi.component';
 import { PaymentVerifiedComponent } from './PaymentVerified/paymentverified.component';
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
+import { DataComponent } from './AllDetails/det.component';
+
 
 
 @NgModule({
@@ -27,13 +29,15 @@ import { FormsModule } from '@angular/forms';
     NetBankingComponent,
     AdminLoginComponent,
     UPIPaymentComponent,
-    PaymentVerifiedComponent
+    PaymentVerifiedComponent,
+    DataComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+
     // AngularFirestoreModule,
     // AngularFireModule,
    

@@ -5,11 +5,11 @@
     <br>
     </div>
     
-    <div class="row" style="background-image: url('assets/img/hero/h1_hero1.png');background-size: cover;height: 100vh;">
+    <div class="row" style="background-image: url('assets/img/hero/h1_hero1.png');background-size: cover;">
     
     
         <div class="container" 
-        style="background-color: transparent;border-radius: 10px;backdrop-filter: saturate(190%) blur(10px);width: 50%;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;height: 50vh;">
+        style="background-color: transparent;border-radius: 10px;backdrop-filter: saturate(190%) blur(10px);width: 50%;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
     
             
         <br>
@@ -17,15 +17,32 @@
 
         <h2>Payment Verified</h2>
 
-        <table style="border: 1px solid;">
-            <tr  style="border: 1px solid;">
-            <th>H</th>
-            <th>E</th>
-            <th>Y</th>
-            </tr>
+        <table class="table">
+            <tr>
+            <th>Name</th>
+            <th>Amount</th>
+            <th>Age</th>
+            <th>Source</th>
+            <th>Destination</th>
+        </tr>
+
+        <tr *ngFor="let a of outputData">
+            <td>{{ a.name }}</td>
+            <td>{{ a.amount }}</td>
+            <td>{{ a.age }}</td>
+            <td>{{ a.source }}</td>
+            <td>{{ a.destination }}</td>
+
+        </tr>
         </table>
+
+        <br>
+
+        <button class="btn" (click)="deleteRecentData()">Ok</button>
         
         <br>
+
+
         </div>
         
         <br>

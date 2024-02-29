@@ -8,6 +8,7 @@ import { AdminLoginComponent } from './AdminLogin/admin.component';
 import { UPIPaymentComponent } from './UPI/upi.component';
 import { PaymentVerifiedComponent } from './PaymentVerified/paymentverified.component';
 
+
 const routes: Routes = [
 
   {path : '', component : MainComponent},
@@ -16,12 +17,12 @@ const routes: Routes = [
   {path : 'net-banking', component : NetBankingComponent},
   {path : 'login', component : AdminLoginComponent},
   {path : 'upi-payment', component : UPIPaymentComponent},
-  {path : 'payment-verified', component : PaymentVerifiedComponent}
+  {path : 'payment-verified', component : PaymentVerifiedComponent},
 
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }
