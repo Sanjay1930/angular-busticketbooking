@@ -1,21 +1,23 @@
-<table class="table">
-    <tr>
-        <th><h4>S.No</h4></th>
-        <th><h4>Name</h4></th>
-        <th><h4>Age</h4></th>
-        <th><h4>Amount</h4></th>
-        <th><h4>Source</h4></th>
-        <th><h4>Destination</h4></th>
-        <th><h4>Transaction ID</h4></th>
-    </tr>
-    <tr *ngFor="let a of allDetails;" >
-        {{ increment() }}
-        <td>{{ sno }}</td>
-        <td>{{ a.name }}</td>
-        <td>{{ a.age }}</td>
-        <td>{{ a.amount }}</td>
-        <td>{{ a.source }}</td>
-        <td>{{ a.destination }}</td>
-        <td>{{ a.tcid }}</td>
-    </tr>
-</table>
+<div class="table-responsive table-center">
+    <table class="table">
+        <tr>
+            <th><h4>S.No</h4></th>
+            <th><h4>Name</h4></th>
+            <th><h4>Age</h4></th>
+            <th><h4>Amount</h4></th>
+            <th><h4>Source</h4></th>
+            <th><h4>Destination</h4></th>
+            <th><h4>Transaction ID</h4></th>
+        </tr>
+        <tr *ngFor="let a of allDetails;" >
+            {{ increment() }}
+            <td>{{ sno }}</td>
+            <td>{{ a.name }}</td>
+            <td>{{ a.age }}</td>
+            <td>{{ a.amount }}</td>
+            <td>{{ a.source }}</td>
+            <td>{{ a.destination }}</td>
+            <td>{{ a.tcid }}</td>
+        </tr>
+    </table>
+</div>

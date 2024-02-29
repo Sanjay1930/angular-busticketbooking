@@ -7,6 +7,7 @@ import { NetBankingComponent } from './NetBanking/netbanking.component';
 import { AdminLoginComponent } from './AdminLogin/admin.component';
 import { UPIPaymentComponent } from './UPI/upi.component';
 import { PaymentVerifiedComponent } from './PaymentVerified/paymentverified.component';
+import { LastPageComponent } from './LastPage/lastpage.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path : 'login', component : AdminLoginComponent},
   {path : 'upi-payment', component : UPIPaymentComponent},
   {path : 'payment-verified', component : PaymentVerifiedComponent},
+  {path : 'lastpage', component : LastPageComponent},
 
 ];
 

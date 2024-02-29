@@ -17,32 +17,31 @@
 
         <h2>Payment Verified</h2>
             <hr><br>
-        <table class="table">
-            <tr>
-            <th>Name</th>
-            <th>Amount</th>
-            <th>Age</th>
-            <th>Source</th>
-            <th>Destination</th>
-        </tr>
 
-        <tr>
-            <td>{{ max.name }}</td>
-            <td>{{ max.amount }}</td>
-            <td>{{ max.age }}</td>
-            <td>{{ max.source }}</td>
-            <td>{{ max.destination }}</td>
-        </tr>
-        </table>
+            <div class="table-responsive">
+                <table class="table align-middle">
+                    <tr>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Age</th>
+                    <th>Source</th>
+                    <th>Destination</th>
+                </tr>
+
+                <tr>
+                    <td>{{ max.name }}</td>
+                    <td>{{ max.amount }}</td>
+                    <td>{{ max.age }}</td>
+                    <td>{{ max.source }}</td>
+                    <td>{{ max.destination }}</td>
+                </tr>
+                </table>
+            </div>
 
         <br>
 
-        <h3> Transaction ID : </h3> <h5>{{ max.tcid }}</h5>
 
-        <img *ngIf="imageUrl" class="img" [src]="imageUrl" alt="Image description" />
-
-
-        <button class="btn" (click)="goToPage('/')">Ok</button>
+        <button class="btn" (click)="goToPage('/lastpage')">Ok</button>
         
         <br><br>
 

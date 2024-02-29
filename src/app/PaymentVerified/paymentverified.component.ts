@@ -63,7 +63,7 @@ loadDetails(){
 }
 
 goToPage(pageName:string){
-  this.router.navigate([`${pageName}`]);
+  this.router.navigate([`${pageName}`], {queryParams : this.max});
 }
 
 
