@@ -48,12 +48,6 @@ supabase.from('transactions').insert(this.TicketDetails).then((res) => {
   console.log(res.data)
 })
 
-this.TicketDetails.user_id = "e0e29014-9e53-4b54-976f-19a05bb93363";
-
-supabase.from('recent_trans').insert(this.TicketDetails).then((res) => {
-  console.log(res.data)
-})
-
   this.router.navigate([`${pageName}`]);
 }
 

@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { DataComponent } from './AllDetails/det.component';
 import { LastPageComponent } from './LastPage/lastpage.component';
+import { UPIPaymentPinComponent } from './UPIPIN/upi-pin.component';
 
 
 
@@ -32,14 +33,15 @@ import { LastPageComponent } from './LastPage/lastpage.component';
     UPIPaymentComponent,
     PaymentVerifiedComponent,
     DataComponent,
-    LastPageComponent
+    LastPageComponent,
+    UPIPaymentPinComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-
     // AngularFirestoreModule,
     // AngularFireModule,
    

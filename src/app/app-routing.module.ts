@@ -8,6 +8,7 @@ import { AdminLoginComponent } from './AdminLogin/admin.component';
 import { UPIPaymentComponent } from './UPI/upi.component';
 import { PaymentVerifiedComponent } from './PaymentVerified/paymentverified.component';
 import { LastPageComponent } from './LastPage/lastpage.component';
+import { UPIPaymentPinComponent } from './UPIPIN/upi-pin.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,8 @@ const routes: Routes = [
   {path : 'upi-payment', component : UPIPaymentComponent},
   {path : 'payment-verified', component : PaymentVerifiedComponent},
   {path : 'lastpage', component : LastPageComponent},
+  {path : 'upi_pin', component : UPIPaymentPinComponent},
+
 
 ];
 
