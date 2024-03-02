@@ -9,6 +9,8 @@ import { UPIPaymentComponent } from './UPI/upi.component';
 import { PaymentVerifiedComponent } from './PaymentVerified/paymentverified.component';
 import { LastPageComponent } from './LastPage/lastpage.component';
 import { UPIPaymentPinComponent } from './UPIPIN/upi-pin.component';
+import { UserLoginComponent } from './UserLogin/userlogin.component';
+import { PaymentConfirmationComponent } from './PaymentConfirmation/payment_conf.component';
 
 
 const routes: Routes = [
@@ -22,7 +24,8 @@ const routes: Routes = [
   {path : 'payment-verified', component : PaymentVerifiedComponent},
   {path : 'lastpage', component : LastPageComponent},
   {path : 'upi_pin', component : UPIPaymentPinComponent},
-
+  {path : 'user_login', component : UserLoginComponent},
+  {path : 'payment_conf', component : PaymentConfirmationComponent}
 
 ];
 

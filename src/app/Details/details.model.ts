@@ -6,7 +6,7 @@ export class ticket{
     user_id : string = uuidv4();
     tcid : string = uuidv4();
     name : string = "guest";
-    age : number = 0;
+    age ?: number;
     source : string = "";
     destination : string = "";
     amount : number = 0;

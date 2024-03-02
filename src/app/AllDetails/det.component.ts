@@ -30,7 +30,7 @@ export class DataComponent implements OnInit {
     }
 
     async getAll(){
-        this.allDetails = await supabase.from('transactions').select('*').then(res => {return res.data})
+        this.allDetails = await supabase.from('transactions').select('*').range(0, 9).then(res => {return res.data})
         console.log(this.allDetails)
     }
 

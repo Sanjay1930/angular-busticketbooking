@@ -21,7 +21,7 @@
             <!-- <div class="row"> -->
                 <div class="form-group">
                     <h5>Name : </h5>
-                    <input [(ngModel)]="TicketDetails.name" type="text" class="form-control" required>
+                    <input [(ngModel)]="TicketDetails.name" disabled type="text" class="form-control" required>
                 </div>
             <!-- </div> -->
 
@@ -60,7 +60,7 @@
 
             <!-- <div class="row "> -->
                 <div class="form-group"  >
-                    <button class="btn" (click) = "goToPage('payment_method');" [disabled]="TicketDetails.amount == undefined || TicketDetails.amount == 0" >Book now</button>
+                    <button class="btn" (click) = "goToPage('payment_conf');" [disabled]="TicketDetails.amount == undefined || TicketDetails.amount == 0 || TicketDetails.age == undefined || TicketDetails.age == 0" >Book now</button>
                 </div>
             <!-- </div> -->
             </div>

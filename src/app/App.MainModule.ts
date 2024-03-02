@@ -17,6 +17,9 @@ import { FormsModule } from '@angular/forms';
 import { DataComponent } from './AllDetails/det.component';
 import { LastPageComponent } from './LastPage/lastpage.component';
 import { UPIPaymentPinComponent } from './UPIPIN/upi-pin.component';
+import { User } from './UserLogin/user.model';
+import { UserLoginComponent } from './UserLogin/userlogin.component';
+import { PaymentConfirmationComponent } from './PaymentConfirmation/payment_conf.component';
 
 
 
@@ -34,7 +37,9 @@ import { UPIPaymentPinComponent } from './UPIPIN/upi-pin.component';
     PaymentVerifiedComponent,
     DataComponent,
     LastPageComponent,
-    UPIPaymentPinComponent
+    UPIPaymentPinComponent,
+    UserLoginComponent,
+    PaymentConfirmationComponent
 
   ],
   imports: [

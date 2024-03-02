@@ -28,11 +28,11 @@
                 <div class="col"><hr></div>
                 <h5>Enter Your UPI PIN</h5>
 
-                <input type="number" class="text-center"  name="" id="" max="999999">
+                <input type="number" class="text-center" [(ngModel)]="upiPin"  name="" id="" max="999999">
 
                 <div class="row mt-4">
                     <div class="col"></div>
-                    <div class="col"><div class="btn " (click)="goToPage('payment-verified')">Pay</div></div>
+                    <div class="col"><div class="btn " (click)="checkPin()">Pay</div></div>
                     <div class="col"></div>
                 </div>
 

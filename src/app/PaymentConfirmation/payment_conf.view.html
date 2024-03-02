@@ -1,0 +1,48 @@
+
+
+
+<div class="row">
+    <br>
+    </div>
+    
+    <div class="row" style="background-image: url('assets/img/hero/h1_hero1.png');background-size: cover;height: 100vh">
+    
+    
+        <div class="container" 
+        style="background-color: transparent;border-radius: 10px;backdrop-filter: saturate(190%) blur(10px);width: 40%;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+    
+            
+        <br>
+
+        <div class="row justify-content-center">
+            <h3 style="cursor: pointer;">Payment Confirmaton</h3>
+        </div>
+        <div class="col"><hr></div>
+        
+
+        <br>
+        <h3 style="color: rebeccapurple;">Your Balance : {{ details.balance }}</h3>
+        <br>
+        <h3 style="color: rebeccapurple;">Total Fare : {{ fare }}</h3>
+        <br>
+
+        
+        <div class="row">
+            <div class="col">
+                <p class="btn" (click)="gotoPage('upi_pin')">Ok</p>
+            </div>
+            <div class="col">
+                <p class="btn" (click)="details">Cancel</p>
+            </div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+
+        <!-- <div class="btn" style="margin-right: 10px;">Ok</div> -->
+        <!-- <div class="btn" (click)="gotoPage('details')">Cancel</div> -->
+        </div>
+        
+        <br>
+    
+    </div>
+    
