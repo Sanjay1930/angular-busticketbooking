@@ -11,6 +11,7 @@ import { LastPageComponent } from './LastPage/lastpage.component';
 import { UPIPaymentPinComponent } from './UPIPIN/upi-pin.component';
 import { UserLoginComponent } from './UserLogin/userlogin.component';
 import { PaymentConfirmationComponent } from './PaymentConfirmation/payment_conf.component';
+import { LogoutComponent } from './Header/Logout/logout.component';
 
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path : 'lastpage', component : LastPageComponent},
   {path : 'upi_pin', component : UPIPaymentPinComponent},
   {path : 'user_login', component : UserLoginComponent},
-  {path : 'payment_conf', component : PaymentConfirmationComponent}
+  {path : 'payment_conf', component : PaymentConfirmationComponent},
+  {path : 'log_out', component : LogoutComponent}
 
 ];
 

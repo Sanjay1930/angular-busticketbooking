@@ -1,5 +1,13 @@
 
-
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+    </style>
 <div class="slider-area fix">
     <div class="slider-active">
     <div class="single-slider">
@@ -8,9 +16,13 @@
     <div class="col-xl-8 col-lg-8 col-md-9 col-sm-12">
     <div class="hero__caption text-center">
     <h2 data-animation="fadeInUp" data-delay="0.1s"> 
-        Hi {{ username.username }},<br>
-        Lifelong memories just a, </h2>
-
+        Hi {{ showName }},<br>
+        <br>
+        <div *ngIf="currentUser">Wallet Balance :<div class="material-symbols-outlined" style="font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24">currency_rupee</div>
+        {{ username.balance }}</div>
+        
+    </h2>
+    <br>
     
     <!--<p data-animation="fadeInUp" data-delay="0.6s">Let’s start your journey with us, your dream will come true</p>-->
     <!--<a href="#" class="btn slider-btn " data-animation="bounceIn" data-delay="1s">Explore Destinations</a>-->

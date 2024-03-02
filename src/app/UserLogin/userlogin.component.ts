@@ -46,6 +46,7 @@ export class UserLoginComponent implements OnInit {
 
     if(this.isValidUser){
       localStorage.setItem('current_user', this.currentUser.user_id)
+      localStorage.setItem('logged_out','user_logged')
       console.log("Current User : ", this.currentUser);
       this.router.navigate(['/'])
     }

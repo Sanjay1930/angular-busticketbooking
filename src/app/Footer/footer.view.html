@@ -62,6 +62,11 @@
     </div>
     <ul class="mb-20">
     <li class="number"><a href="/login" style="text-decoration: none;">Admin Login</a></li>
+    <li class="number">
+        <a *ngIf="!currentUser" href="/user_login" style="text-decoration: none;">User Login</a>
+        <a *ngIf="currentUser" href="/log_out" style="text-decoration: none;">Logout</a>
+    </li>
+    <!-- <li class="number"><a href="/login" style="text-decoration: none;">Admin Login</a></li> -->
     </ul>
     </div>
     </div>

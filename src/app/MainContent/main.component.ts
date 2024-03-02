@@ -16,35 +16,41 @@ const supabaseUrl = 'https://dujuelyrtbutsjxzikpq.supabase.co'; // Replace with 
 })
 export class MainComponent implements OnInit{
 
-  currentUser : any;
-  isUser :boolean = false;
+  currentUser : any = localStorage.getItem('current_user');
+  valid : boolean = false;
   username : any;
-
+  showName : any = "Guest";
   constructor(private router: Router){}
 
   ngOnInit(): void {
     this.User()
+    this.logRef()
   }
 
+  logRef(){
+    if(localStorage.getItem('logged_out')){
+      console.log("hello")
+      location.reload()
+      localStorage.removeItem('logged_out')
+    }
+  }
   User(){
-    if(localStorage.getItem('current_user')){
-      this.currentUser = localStorage.getItem('current_user')
-      this.isUser = true;
+    if(this.currentUser){
       this.getCredentials()
-      console.log(this.currentUser)
+      this.valid = true
     }
   }
 
   async getCredentials(){
-    await supabase.from('login_details').select('username').eq('user_id',this.currentUser).then(res => {
+    await supabase.from('login_details').select('*').eq('user_id',this.currentUser).then(res => {
       this.username = (res.data)
       this.username = this.username[0]
-      console.log(this.username)
+      this.showName = this.username.username
     })
   }
 
   setLink(){
-    if(localStorage.getItem('current_user'))
+    if(this.currentUser)
       this.router.navigate(['details'])
     else{
       alert('Login for payment')
