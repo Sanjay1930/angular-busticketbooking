@@ -28,7 +28,7 @@ export class PaymentConfirmationComponent implements OnInit {
   async getCredentials(){
     let user_id = localStorage.getItem('current_user')
     console.log(user_id)
-    await supabase.from('login_details').select('*').eq('user_id',user_id).then(res => {
+    await supabase.from('login_details').select('balance').eq('user_id',user_id).then(res => {
       this.details = res.data
       this.details = this.details[0]
       console.log(this.details)
@@ -37,7 +37,12 @@ export class PaymentConfirmationComponent implements OnInit {
   }
 
   gotoPage(page:string){
-    this.router.navigate([`${page}`])
+    if(Number(localStorage.getItem('fare')) < this.details.balance)
+      this.router.navigate([`${page}`])
+    else{
+      alert('Insufficient Funds contact admin')
+      this.router.navigate(['/'])
+    }
   }
 
 
