@@ -9,9 +9,7 @@ import { ticket } from '../Details/details.model';
 
 const supabaseUrl = 'https://dujuelyrtbutsjxzikpq.supabase.co'; // Replace with your Supabase project URL
  const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR1anVlbHlydGJ1dHNqeHppa3BxIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTQ3OTU0OTEsImV4cCI6MjAxMDM3MTQ5MX0.g8RzXeGSaIaHZF2GYKszVb6-MnA6Q6DTagVbZUsfYBs'; 
-//  const supabase = createClient(supabaseUrl, supabaseAnonKey);
-const supabase = createClient(process.env.URL, process.env.KEY);
-
+ const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 @Component({
   // selector: 'app-root',
