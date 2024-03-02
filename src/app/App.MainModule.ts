@@ -20,6 +20,7 @@ import { UPIPaymentPinComponent } from './UPIPIN/upi-pin.component';
 import { User } from './UserLogin/user.model';
 import { UserLoginComponent } from './UserLogin/userlogin.component';
 import { PaymentConfirmationComponent } from './PaymentConfirmation/payment_conf.component';
+import { SetUpiComponent } from './SetUPI/set-upi.component';
 
 
 
@@ -39,7 +40,8 @@ import { PaymentConfirmationComponent } from './PaymentConfirmation/payment_conf
     LastPageComponent,
     UPIPaymentPinComponent,
     UserLoginComponent,
-    PaymentConfirmationComponent
+    PaymentConfirmationComponent,
+    SetUpiComponent
 
   ],
   imports: [

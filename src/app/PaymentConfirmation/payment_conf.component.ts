@@ -38,7 +38,11 @@ export class PaymentConfirmationComponent implements OnInit {
 
   gotoPage(page:string){
     if(Number(localStorage.getItem('fare')) < this.details.balance)
-      this.router.navigate([`${page}`])
+      if(page != '/')
+        this.router.navigate([`${page}`])
+      else{
+        this.router.navigate(['/'])
+      }
     else{
       alert('Insufficient Funds contact admin')
       this.router.navigate(['/'])

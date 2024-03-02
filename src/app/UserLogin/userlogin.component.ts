@@ -37,7 +37,6 @@ export class UserLoginComponent implements OnInit {
   checkCredentials(){
     for(let a of this.allUsers){
       if((a.username == this.UserDetails.username) && (a.password == this.UserDetails.password)){
-        console.log("Hweyy found one")
         this.isValidUser = true;
         this.currentUser = a
         break
@@ -48,7 +47,10 @@ export class UserLoginComponent implements OnInit {
       localStorage.setItem('current_user', this.currentUser.user_id)
       localStorage.setItem('logged_out','user_logged')
       console.log("Current User : ", this.currentUser);
-      this.router.navigate(['/'])
+      if(this.currentUser.status != 0)
+        this.router.navigate(['/'])
+      else
+        this.router.navigate(['set-upi'])
     }
   }
 

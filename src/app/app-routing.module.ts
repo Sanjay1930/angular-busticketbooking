@@ -12,6 +12,7 @@ import { UPIPaymentPinComponent } from './UPIPIN/upi-pin.component';
 import { UserLoginComponent } from './UserLogin/userlogin.component';
 import { PaymentConfirmationComponent } from './PaymentConfirmation/payment_conf.component';
 import { LogoutComponent } from './Header/Logout/logout.component';
+import { SetUpiComponent } from './SetUPI/set-upi.component';
 
 
 const routes: Routes = [
@@ -27,7 +28,9 @@ const routes: Routes = [
   {path : 'upi_pin', component : UPIPaymentPinComponent},
   {path : 'user_login', component : UserLoginComponent},
   {path : 'payment_conf', component : PaymentConfirmationComponent},
-  {path : 'log_out', component : LogoutComponent}
+  {path : 'log_out', component : LogoutComponent},
+  {path : 'set-upi', component : SetUpiComponent}
+  
 
 ];
 
