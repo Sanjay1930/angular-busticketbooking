@@ -21,6 +21,7 @@ import { User } from './UserLogin/user.model';
 import { UserLoginComponent } from './UserLogin/userlogin.component';
 import { PaymentConfirmationComponent } from './PaymentConfirmation/payment_conf.component';
 import { SetUpiComponent } from './SetUPI/set-upi.component';
+import { BookdedComponent } from './BookedPage/booked.component';
 
 
 
@@ -41,7 +42,8 @@ import { SetUpiComponent } from './SetUPI/set-upi.component';
     UPIPaymentPinComponent,
     UserLoginComponent,
     PaymentConfirmationComponent,
-    SetUpiComponent
+    SetUpiComponent,
+    BookdedComponent
 
   ],
   imports: [

@@ -13,6 +13,7 @@ import { UserLoginComponent } from './UserLogin/userlogin.component';
 import { PaymentConfirmationComponent } from './PaymentConfirmation/payment_conf.component';
 import { LogoutComponent } from './Header/Logout/logout.component';
 import { SetUpiComponent } from './SetUPI/set-upi.component';
+import { BookdedComponent } from './BookedPage/booked.component';
 
 
 const routes: Routes = [
@@ -29,8 +30,8 @@ const routes: Routes = [
   {path : 'user_login', component : UserLoginComponent},
   {path : 'payment_conf', component : PaymentConfirmationComponent},
   {path : 'log_out', component : LogoutComponent},
-  {path : 'set-upi', component : SetUpiComponent}
-  
+  {path : 'set-upi', component : SetUpiComponent},
+  {path : 'booked', component : BookdedComponent},  
 
 ];
 

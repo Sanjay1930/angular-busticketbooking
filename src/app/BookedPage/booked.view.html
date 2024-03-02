@@ -1,0 +1,49 @@
+
+
+
+<div class="row">
+<br>
+</div>
+
+
+<div class="row" style="background-image: url('assets/img/hero/h1_hero1.png');background-size: cover;height: 100vh;">
+
+
+    <div class="container" 
+    style="background-color: white;border-radius: 10px;backdrop-filter: saturate(190%) blur(10px);width: 90vh;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;height: 9 0vh;">
+
+        <br>
+        
+
+            <div class="col">
+                <h2 style="text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;"><span class="material-symbols-outlined">check_circle</span>&nbsp;Booking Successful</h2>
+            <hr>
+            <div class="form-group">
+                <h4>Name  </h4>
+                <input type="text" disabled [(ngModel)]="data.name" class="form-control">
+            </div>
+            <div class="form-group">
+                <h4>Age <span style="color: black;"></span></h4>
+                <input type="text" disabled [(ngModel)]="data.age" class="form-control">
+            </div>
+            <div class="form-group">
+                <h4>Source  <span style="color: black;"></span></h4>
+                <input type="text" disabled [(ngModel)]="data.source" class="form-control">
+            </div>
+            <div class="form-group">
+                <h4>Destination  <span style="color: black;"></span></h4>
+                <input type="text" disabled [(ngModel)]="data.destination" class="form-control">
+            </div>
+            <div class="form-group">
+                <h4>Transaction ID  <span style="color: black;"></span></h4>
+                <input type="text" disabled [(ngModel)]="data.tcid" class="form-control">
+            </div><br>
+            <div class="form-group">
+                <button type="submit" class="btn" (click)="gotoPage('/')">Leave Page</button>
+            </div>
+        <br>
+    </div>
+    
+    <br>
+
+</div>
