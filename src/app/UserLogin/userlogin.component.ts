@@ -27,6 +27,7 @@ export class UserLoginComponent implements OnInit {
   allUsers : any;
   ngOnInit(): void {
     this.getCredentials()
+    debugger;
   }
 
   async getCredentials(){
